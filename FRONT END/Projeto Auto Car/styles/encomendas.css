@@ -1,0 +1,134 @@
+
+body{
+    font-family: 'Tahoma','Arial';
+    background-color: #000000;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+/*Estilização do Header da pagina*/
+.header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.884);
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width:12% ;
+    height:100px ;
+}
+/*Estlização do menu do Site*/
+nav{
+    color:rgb(255, 255, 255);
+    font-size:28px;
+    right: 0;
+    top: 50px;
+    
+  
+  }
+  nav li{
+      display: inline;
+      margin-right: 60px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .div-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Título dos produtos */
+.encomendas-titulo {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+  }
+/* Estilização da Tabela */
+table{
+    width: 100%;
+    margin-bottom: 2%;
+    table-layout: fixed;
+  }
+
+td{
+   padding: 10px;
+   margin: 0;
+   border: 1px solid #ccc;
+   text-align:  center;
+   color: rgb(255, 255, 255);
+  }
+
+  th{
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    text-align:  center;
+  }
+
+/*Estilização do Footer*/
+footer {
+    background: url("https://www.paitomotors.com.br/media/wysiwyg/lafs1.jpg"); /* imagem nova que vamos gerar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 40px 20px;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  footer .logo_footer {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  footer a i {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #1E90FF;
+    transition: color 0.3s;
+  }
+  
+  footer a i:hover {
+    color: #63b3ff;
+  }
+
+
+

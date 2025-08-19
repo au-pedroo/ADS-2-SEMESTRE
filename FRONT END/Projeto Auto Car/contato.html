@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Car</title>
+    <link rel="stylesheet" href="./styles/contato.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="div-content">
+        <img
+          class="logo"
+          src="./assets/images/logosite.png"/>
+         <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <main>
+    <ul class="contato-titulo">
+      <li class="contato-item">Contato</li>
+    </ul>
+    <!-- Formulário -->
+    <form id="frmContato">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label>Nome :</label>
+        <input type="text" id="nomesobrenome" name="" class="input-padrao" required>
+        
+        <label>E-mail:</label>
+        <input type="email" id="email" name="" class="input-padrao" placeholder="seuemail@dominio.com">
+
+        <label>Telefone:</label>
+        <input type="tel" id="telefone" name="" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
+
+        <label>* Mensagem:</label>
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+        <label>Como prefere o nosso contato?
+          <input type="radio" value="radio-mail" name="Contato"> E-mail
+          <input type="radio" value="radio-telefone" name="Contato"> Telefone
+          <input type="radio" value="radio-whatsapp" name="Contato"> Whatsapp
+        </label>
+
+        <br>
+        <label>Qual o motivo do seu contato?
+          <select>
+            <option>Selecione</option>
+            <option>Dúvida</option>
+            <option>Compra</option>
+            <option>Feedebek</option>
+            <option>Test Drive</option>
+          </select>
+        </label>
+        <br>
+      </fieldset>
+
+      <label><input type="checkbox" class="chk"> Gostaria de receber nossas novidades por e-mail?</label>
+
+      <input type="submit" id="enviar" value="Enviar formulário" class="enviar">
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+      <img src="assets/images/logosite.png" title="Auto Car" class="logo_footer" />
+      <p>
+        Atendimento Online:
+        <a href="https://wa.me/5511999268677"><i class="fa fa-whatsapp"></i></a>
+        (11) 57382-0274 |
+        <a href="https://instagram.com/Auto_car"><i class="fa fa-instagram"></i></a> @_AutoCar_
+      </p>
+    </footer>
+</body>
+
+</html>

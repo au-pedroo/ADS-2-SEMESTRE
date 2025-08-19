@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auto Car</title>
+  <link rel="stylesheet" href="./styles/estilos_produtos.css" />
+  <script>
+    alert("Conheça Nossos Serviços!!!");
+     data = new Date
+    dia = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
+    mes = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+
+    function abrirDetalhes(nome, imagens, descricao) {
+      const url = `pop_produtos.html?nomeCarro=${encodeURIComponent(nome)}&imagensCarro=${encodeURIComponent(imagens)}&descricaoCarro=${encodeURIComponent(descricao)}`;
+      window.open(url, "_blank", "width=800,height=700");
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+  <div class="div-content">
+    <img class="logo" src="./assets/images/logosite.png"/>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="encomendas.html">Encomendas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <main>
+    <ul class="produtos-titulo">
+      <li class="produtos-item">Carros Disponíveis</li>
+    </ul>
+    <p class="texto-produtos">
+  A Auto Car se orgulha de oferecer uma linha exclusiva de veículos de luxo para quem busca sofisticação, desempenho e conforto. Nossa seleção inclui os modelos mais renomados das marcas mais desejadas do mercado, como Lamborghini, Ferrari, Mercedes-Benz e muitas outras.
+  <br><br>
+  Todos os nossos carros são 0Km, cuidadosamente inspecionados e prontos para entregar a você uma experiência premium desde o primeiro contato. Aqui, cada detalhe importa — do acabamento interno ao ronco do motor.
+  <br><br>
+  Invista em qualidade, estilo e segurança. Conheça nossos produtos e descubra o prazer de dirigir com elegância e potência.
+</p>
+
+    <div class="container">
+      <!-- Lamborghini -->
+      <div class="card" onclick="abrirDetalhes(
+        'Lamborghini Urus',
+        'https://img.olx.com.br/images/12/122443958390068.webp,https://bocamafrapremium.com.br/wp-content/uploads/2022/12/Lamborghini-Urus-tecnologia.jpg ,https://www.vegasautogallery.com/imagetag/3266/29/l/Used-2024-Lamborghini-Urus-1706289620.jpg','SUV esportivo V8 biturbo, 650cv, Cor: Branco. R$ 3.890.000,00')">
+        <img src="https://img.olx.com.br/images/12/122443958390068.webp" alt="Lamborghini Urus">
+        <h2>Lamborghini Urus</h2>
+        <p>Cor Branco</p>
+        <span class="preco">R$ 3.890.000,00</span>
+      </div>
+
+      <!-- Ferrari -->
+      <div class="card" onclick="abrirDetalhes(
+        'Ferrari 488',
+        'https://s3.ecompletocarros.dev/images/lojas/285/veiculos/90371/veiculoInfoVeiculoImagesMobile/vehicle_image_1644271368_d41d8cd98f00b204e9800998ecf8427e.jpeg,https://veja.abril.com.br/wp-content/uploads/2016/06/alx_ferrari-488-gtb-20110610-0009-ale_original.jpeg?quality=70&strip=info&w=817,https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/G4RC2PQT3BNMHKYOS7QTOMSEVE.jpg?auth=179a9f7e59841e4b8f1526ff91899d36056cd7b9834711e8fb57118a4bc5ddfd&width=780&height=520','Esportivo V8, 670cv 0-100km/h em 3.0s, Cor: Padrão, R$ 3.035.159')">
+        <img src="https://s3.ecompletocarros.dev/images/lojas/285/veiculos/90371/veiculoInfoVeiculoImagesMobile/vehicle_image_1644271368_d41d8cd98f00b204e9800998ecf8427e.jpeg" alt="Ferrari 488">
+        <h2>Ferrari 488</h2>
+        <p>Cor Padrão</p>
+        <span class="preco">R$ 3.035.159</span>
+      </div>
+
+      <!-- Mercedes -->
+      <div class="card" onclick="abrirDetalhes(
+        'Mercedes-Benz AMG 63',
+        'https://s3.ecompletocarros.dev/images/lojas/108/veiculos/132865/veiculoInfoVeiculoImagesMobile/vehicle_image_1676157589_d41d8cd98f00b204e9800998ecf8427e.jpeg,https://p.turbosquid.com/ts-thumb/rN/qkeMdY/FiiDjijx/one/png/1572207963/600x600/fit_q87/f323f16ee0b90856808469bdbb4f56c6bde9ccc7/one.jpg,https://quatrorodas.abril.com.br/wp-content/uploads/2012/08/Motor-do-C-63-AMG-Coup%C3%A9-Black-Series-modelo-2012-da-Mercedes-Benz-testado-pela.jpg?quality=70&strip=info',
+        'Potência máxima: 585cv. Cor: Preto Chumbo. R$ 1.989.900'
+      )">
+        <img src="https://s3.ecompletocarros.dev/images/lojas/108/veiculos/132865/veiculoInfoVeiculoImagesMobile/vehicle_image_1676157589_d41d8cd98f00b204e9800998ecf8427e.jpeg" alt="Mercedes-Benz AMG 63">
+        <h2>Mercedes-Benz AMG 63</h2>
+        <p>Cor Preto Chumbo</p>
+        <span class="preco">R$ 1.989.900</span>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <img src="assets/images/logosite.png" title="Auto Car" class="logo_footer" />
+    <p>
+      Atendimento Online:
+      <a href="https://wa.me/5511999268677"><i class="fa fa-whatsapp"></i></a>
+      (11) 57382-0274 |
+      <a href="https://instagram.com/Auto_car"><i class="fa fa-instagram"></i></a> @_AutoCar_
+    </p>
+  </footer>
+</body>
+</html>
