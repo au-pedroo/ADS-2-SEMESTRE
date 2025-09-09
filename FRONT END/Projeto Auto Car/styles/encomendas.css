@@ -63,6 +63,14 @@ nav{
     padding: 20px;
     text-align: center;
   }
+  .buscar-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    padding: 20px;
+    text-align: left;
+  }
 /* Estilização da Tabela */
 table{
     width: 100%;
@@ -129,6 +137,18 @@ td.nome {
   background-color: white;
   color: red;
 }
+
+#mensagem-erro {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e53935;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 6px;
+  font-weight: bold;
+  display: none; /* começa escondido */
+}
+
 
 .form-encomenda {
   margin-top: 30px;

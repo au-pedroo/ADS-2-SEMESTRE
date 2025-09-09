@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Car</title>
+    <link rel="stylesheet" href="./styles/encomendas.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auto Car</title>
-  <link rel="stylesheet" href="./styles/encomendas.css" />
-</head>
-
-<body>
-  <header class="header">
-    <div class="div-content">
-      <img class="logo" src="./assets/images/logosite.png" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="encomendas.html">Encomendas</a></li>
+  <body>
+    <header class="header">
+      <div class="div-content">
+        <img class="logo" src="./assets/images/logosite.png" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <ul class="encomendas-titulo">
+        <li class="produtos-item">Pedidos dos Veiculos</li>
+      </ul>
+      <section class="container">
+        <!--Campo de Filtragem da Tabela-->
+        <ul class="buscar-titulo">
+          <label for="filtrar-tabela">Buscar:</label>
+          <input
+            type="text"
+            id="filtrar-tabela"
+            class="filtrar-tabela"
+            placeholder="Digite o cliente que deseja buscar"
+          />
         </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <ul class="encomendas-titulo">
-      <li class="produtos-item">Pedidos dos Veiculos</li>
-    </ul>
-    <section class="container">
-      <!--Campo de Filtragem da Tabela-->
-      <label for="filtrar-tabela">Buscar:</label>
-      <input type="text" id="filtrar-tabela"
-      class="filtrar-tabela" placeholder="Digite o cliente que deseja buscar">
-      <!--Tabela das Encomendas-->
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Produto</th>
-            <th>Quantidade</th>
-            <th>Valor Unitario</th>
-            <th>Total (R$)</th>
-          </tr>
-        </thead>
-        <tbody id="tabela-clientes">
-          <tr class="cliente">
-            <td class="nome">Vitor</td>
-            <td class="produto">Ferrari 488</td>
-            <td class="qtde">1</td>
-            <td class="unitario">3035159</td>
-            <td class="total"></td>
-          </tr>
+        <!--Tabela das Encomendas-->
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Valor Unitario</th>
+              <th>Total (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-clientes">
+            <tr class="cliente">
+              <td class="nome">Vitor</td>
+              <td class="produto">Ferrari 488</td>
+              <td class="qtde">1</td>
+              <td class="unitario">3035159</td>
+              <td class="total"></td>
+            </tr>
 
-          <tr class="cliente">
-            <td class="nome">Marcio</td>
-            <td class="produto">Lamborghini-Urus</td>
-            <td class="qtde">1</td>
-            <td class="unitario">3890000</td>
-            <td class="total"></td>
-          </tr>
+            <tr class="cliente">
+              <td class="nome">Marcio</td>
+              <td class="produto">Lamborghini-Urus</td>
+              <td class="qtde">1</td>
+              <td class="unitario">3890000</td>
+              <td class="total"></td>
+            </tr>
 
-          <tr class="cliente">
-            <td class="nome">Vinicius</td>
-            <td class="produto">Mercedes-Benz AMG 63</td>
-            <td class="qtde">1</td>
-            <td class="unitario">1989900</td>
-            <td class="total"></td>
-          </tr>
-        </tbody>
-      </table>
-      <form id="form-encomenda" class="form-encomenda">
+            <tr class="cliente">
+              <td class="nome">Vinicius</td>
+              <td class="produto">Mercedes-Benz AMG 63</td>
+              <td class="qtde">1</td>
+              <td class="unitario">1989900</td>
+              <td class="total"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="mensagem-erro"></div>
+
+        <form id="form-encomenda">
+          <!-- seus campos aqui -->
+        </form>
+
+        <form id="form-encomenda" class="form-encomenda">
           <h2>Adicionar Encomenda</h2>
 
           <div class="form-row">
@@ -96,10 +107,10 @@
                 <option value="">Selecione</option>
                 <option value="Porsche 911 Turbo S">Porsche 911 Turbo S</option>
                 <option value="BMW M8 Competition">BMW M8 Competition</option>
-                <option value="Bugatti Chiron">
-                  Bugatti Chiron
+                <option value="Bugatti Chiron">Bugatti Chiron</option>
+                <option value="Audi R8 V10 Performance">
+                  Audi R8 V10 Performance
                 </option>
-                <option value="Audi R8 V10 Performance">Audi R8 V10 Performance </option>
               </select>
             </div>
 
@@ -120,20 +131,27 @@
             Adicionar
           </button>
         </form>
-    </section>
-  </main>
-  <footer>
-    <img src="assets/images/logosite.png" title="Auto Car" class="logo_footer" />
-    <p>
-      Atendimento Online:
-      <a href="https://wa.me/5511999268677"><i class="fa fa-whatsapp"></i></a>
-      (11) 57382-0274 |
-      <a href="https://instagram.com/Auto_car"><i class="fa fa-instagram"></i></a> @_AutoCar_
-    </p>
-  </footer>
-  <script src="/JS/adicionaEncomenda.js"></script>
-  <script src="/JS/encomendas.js"></script>
-  <script src="/JS/removerEncomenda.js"></script>
-  <script src="/JS/buscarEncomenda.js"></script>
-</body>
+      </section>
+    </main>
+    <footer>
+      <img
+        src="assets/images/logosite.png"
+        title="Auto Car"
+        class="logo_footer"
+      />
+      <p>
+        Atendimento Online:
+        <a href="https://wa.me/5511999268677"><i class="fa fa-whatsapp"></i></a>
+        (11) 57382-0274 |
+        <a href="https://instagram.com/Auto_car"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        @_AutoCar_
+      </p>
+    </footer>
+    <script src="/JS/adicionaEncomenda.js"></script>
+    <script src="/JS/encomendas.js"></script>
+    <script src="/JS/removerEncomenda.js"></script>
+    <script src="/JS/buscarEncomenda.js"></script>
+  </body>
 </html>
