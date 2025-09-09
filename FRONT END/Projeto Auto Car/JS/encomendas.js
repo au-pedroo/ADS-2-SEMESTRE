@@ -28,33 +28,41 @@ for (var count = 0; count < clientes.length; count++) {
     // Verifica se a quantidade é inválida (menor que 1 ou não é um número)
     if (tab_qtd < 1 || isNaN(tab_qtd)) {
         // Exibe mensagem de erro na quantidade
-        clientes[count].querySelector(".qtde").textContent = "Quantidade Invalida!!";
+        clientes[count].querySelector(".qtde").textContent = 
+        "Quantidade Invalida!!";
         
         // Altera a cor do texto da quantidade para branco
-        clientes[count].querySelector(".qtde").style.color = "white";
+        clientes[count].querySelector(".qtde").style.color = 
+        "white";
         
         // Altera a cor de fundo da linha da tabela para vermelho (indicando erro)
-        clientes[count].style.backgroundColor = "red";
+        clientes[count].style.backgroundColor = 
+        "red";
 
     // Se a quantidade for válida, verifica se o valor unitário é inválido
     } else if (tab_unitario < 1 || isNaN(tab_unitario)) {
         // Exibe mensagem de erro no valor unitário
-        clientes[count].querySelector(".unitario").textContent = "Quantidade Invalida!!";
+        clientes[count].querySelector(".unitario").textContent = 
+        "Quantidade Invalida!!";
         
         // Altera a cor do texto do unitário para vermelho
-        clientes[count].querySelector(".unitario").style.color = "red";
+        clientes[count].querySelector(".unitario").style.color = 
+        "red";
         
         // Altera a cor de fundo da linha da tabela para branco
-        clientes[count].style.backgroundColor = "white";
+        clientes[count].style.backgroundColor = 
+        "white";
     }
 
     // Se quantidade e valor unitário forem válidos...
     else {
         // Calcula o total e exibe no campo correspondente
-        clientes[count].querySelector(".total").textContent = calculaTotal(tab_qtd, tab_unitario);
+        clientes[count].querySelector(".total").textContent = 
+        calculaTotal(tab_qtd, tab_unitario);
 
         //Envia Formatação Para o valor Unitario
-        clientes[count].querySelector(".unitario").textContent = formatarValor((parseFloat)(tab_unitario));
+        clientes[count].querySelector(".unitario").textContent = 
+        formatarValor((parseFloat)(tab_unitario));
     }
 }
 
@@ -88,7 +96,9 @@ function calculaTotal(qtde, unitario) {
 
 // Função que formata os valores em R$
 function formatarValor(valor){
-    var valor_formatado = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    var valor_formatado = valor.toLocaleString
+    ('pt-BR', { style: 'currency', currency: 'BRL' });
     return valor_formatado;
 }
+
 
