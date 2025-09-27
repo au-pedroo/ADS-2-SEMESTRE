@@ -12,8 +12,13 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(String nome){
-
+    public Paciente(String nome, String rg, String endereco, String telefone, String dataNascimento, String profissao){
+         this.setNome(nome);
+         this.setRg(rg);
+         this.setEndereco(endereco);
+         this.setTelefone(telefone);
+         this.setDataNascimento(dataNascimento);
+         this.setProfissao(profissao);
     }
 
     public String getNome() {
@@ -62,5 +67,16 @@ public class Paciente {
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    public void imprimirDados(){
+        System.out.println("Nome : " + this.nome);
+        System.out.println("RG : " + this.rg);
+        System.out.println("Endereço : " + this.endereco);
+        System.out.println("Telefone : " + this.telefone);
+        System.out.println("Nascimento : " + this.dataNascimento);
+        System.out.println("Profissão : " + this.profissao);
+
+
     }
 }
