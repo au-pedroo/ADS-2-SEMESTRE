@@ -1,0 +1,25 @@
+{
+    "encomendas_web":[
+        {
+            "nome": "Miguel",
+            "produto":"Porsche 911 Turbo S",
+            "qtde": 1,
+            "unitario": 1500000,
+            "total": 3.00000000
+        },
+        {
+           "nome": "Roberto",
+            "produto":"Lamborghini-Urus",
+            "qtde": 1,
+            "unitario": 303515900,
+            "total": 303515900
+        },
+        {
+            "nome": "Lucas",
+            "produto":"Mercedes-Benz AMG 63",
+            "qtde": 1,
+            "unitario": 198990000,
+            "total": 198990000
+        }
+    ]
+}

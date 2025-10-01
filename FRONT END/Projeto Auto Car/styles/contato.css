@@ -67,9 +67,11 @@ h1, h2, h3, p, li, a, span {
 /* Título */
 .contato-titulo {
   font-size: 40px;
-  font-weight: bold;
-  color: white;
-  list-style: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    padding: 20px;
+    text-align: center;
 }
 
 
