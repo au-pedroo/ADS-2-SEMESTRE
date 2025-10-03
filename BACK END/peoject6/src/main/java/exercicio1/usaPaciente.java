@@ -13,5 +13,7 @@ public class usaPaciente {
 
           Paciente p2 = new Paciente("Marcelo Henrique Torres","23.456.789-0","Travessa São João, 45 — Bloco B, Bairro das Pedras, Belo Horizonte — MG","+55 (31) 99722-3344","02/11/1983","Desenvolvedor Back End");
           p2.imprimirDados();
+
+
     }
 }
