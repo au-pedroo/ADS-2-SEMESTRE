@@ -1,7 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
-
 public class Produto {
     private String nome;
     private double preco;
@@ -62,7 +60,7 @@ public class Produto {
     }
 
     public void exibirInformacoes(){
-        System.out.println("Nome do Produto: " + this.getNome());
+        System.out.println("\nNome do Produto: " + this.getNome());
         System.out.println("Quantidade do Produto: " + this.getQuantidade());
         System.out.println("Preço do Produto: " + this.getPreco());
         System.out.println("Estoque baixo: " + (this.estoqueBaixo() ? "Sim" : "Não"));

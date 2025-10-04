@@ -57,12 +57,12 @@ public class Livro {
 
     public void ler(int qtd) {
         if (isEmprestado() == false || !isEmprestado()) {
-            System.out.println("Não é possível ler este livro, pois ele não está emprestado.");
+            System.out.println("Não é possível ler este livro, pois ele está emprestado.");
             return;
         }
 
         if (this.getPaginasLidas() + qtd > this.getPaginas()) {
-            setPaginasLidas(getPaginas()); // Corrigido: antes estava setPaginas()
+            setPaginasLidas(getPaginas());
         } else {
             setPaginasLidas(getPaginasLidas() + qtd);
         }
@@ -80,7 +80,7 @@ public class Livro {
     }
 
     public void exibirInformacoes(){
-        System.out.println("Informações sobre o Livro ");
+        System.out.println("\nInformações sobre o Livro ");
         System.out.println("Titulo do livro: " + this.getTitulo());
         System.out.println("Autor: " + this.getAutor());
         System.out.println("Número de páginas: " + this.getPaginas());
