@@ -1,0 +1,73 @@
+Script
+
+en
+conf t
+hostname SW1
+enable secret senai123
+line console 0
+password senai123
+login
+exit
+service password-encryption
+line vty 0 4
+password senai123
+login
+exit
+vtp domain cisco
+vtp password cisco
+vtp mode server
+vlan 10
+name SRV
+vlan 20
+name ADM
+vlan 30
+name TI
+exit
+int range gi0/2
+switchport mode trunk
+switchport trunk all vlan all
+exit
+int range fa0/1-2
+switchport mode access
+switchport access vlan 10
+exit
+int range fa0/2-9
+switchport mode access
+switchport access vlan 20
+exit
+int range fa0/10-19
+switchport mode access
+switchport access vlan 30
+do wr
+do show vlan brief
+
+
+en
+conf t
+hostname SW2
+enable secret senai123
+line console 0
+password senai123
+login
+exit
+service password-encryption
+line vty 0 4
+password senai123
+login
+exit
+vtp domain cisco
+vtp password cisco
+vtp mode client
+int range gi0/2
+switchport mode trunk
+switchport trunk all vlan all
+exit
+int range fa0/1-9
+switchport mode access
+switchport access vlan 20
+exit
+int range fa0/10-19
+switchport mode access
+switchport access vlan 30
+do wr
+do show vlan brief
