@@ -1,6 +1,6 @@
 package model;
 
-public class Vestuario extends Produto {
+public abstract class Vestuario extends Produto {
 
     private String nome;
     private String cor;
@@ -11,6 +11,7 @@ public class Vestuario extends Produto {
         this.setNome(n);
         this.setCor(co);
         this.setTamanho(t);
+        this.imprimirTipoproduto();
     }
 
     public String getNome() {
@@ -56,5 +57,10 @@ public class Vestuario extends Produto {
                     "\nCor: " + this.cor +
                     "\nTamanho: " + this.tamanho;
         return ret;
+    }
+
+    @Override
+    public void imprimirTipoproduto() {
+        System.out.println("Vestuario");
     }
 }

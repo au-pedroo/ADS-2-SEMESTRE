@@ -1,6 +1,6 @@
 package model;
 
-public class Calcado extends Produto{
+public class Calcado extends Produto implements Seguranca {
 
     private String materialSola;
     private String materialParteSuperior;
@@ -11,6 +11,8 @@ public class Calcado extends Produto{
         this.setMaterialSola(ms);
         this.setMaterialParteSuperior(mps);
         this.setMaterialInterno(mi);
+        this.imprimirTipoproduto();
+        this.imprimirMensagemSeguranca();
     }
 
     public String getMaterialSola() {
@@ -56,5 +58,15 @@ public class Calcado extends Produto{
                 "\nMaterial Parte Superior: " + this.materialParteSuperior +
                 "\nMaterial Interno: " + this.materialInterno;
         return ret;
+    }
+
+    @Override
+    public void imprimirTipoproduto() {
+
+    }
+
+    @Override
+    public void imprimirMensagemSeguranca() {
+        System.out.println("verificar a numeração para não fazer gato");
     }
 }

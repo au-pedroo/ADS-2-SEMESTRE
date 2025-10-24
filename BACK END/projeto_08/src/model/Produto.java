@@ -1,6 +1,6 @@
 package model;
 
-public class Produto {
+public  abstract class Produto {
     private int codigo;
     private String descricao;
     private double valor;
@@ -57,4 +57,6 @@ public class Produto {
                 "\nValor: " + this.valor;
         return ret;
     }
+
+    public abstract void imprimirTipoproduto();
 }
