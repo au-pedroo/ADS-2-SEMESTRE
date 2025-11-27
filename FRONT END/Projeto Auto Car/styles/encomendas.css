@@ -19,10 +19,11 @@ body{
     background-color: rgba(0, 0, 0, 0.884);
     height: 140px;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
 }
 .logo{
+    justify-content: left;
     width:12% ;
     height:100px ;
 }
